@@ -1,0 +1,39 @@
+{
+	"name": "Sink_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageLinkedServics",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "sinkconatiner"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "EID",
+				"type": "String"
+			},
+			{
+				"name": "EName",
+				"type": "String"
+			},
+			{
+				"name": "Esalary",
+				"type": "String"
+			},
+			{
+				"name": "Addres",
+				"type": "String"
+			}
+		]
+	}
+}
